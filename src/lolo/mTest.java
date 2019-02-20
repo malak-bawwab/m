@@ -1,8 +1,11 @@
-package malakb;
+package lolo;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import malakb.SC;
+import malakb.product;
 
 
 public class mTest {
