@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default ="compile">
+<project default ="everything">
 <property name="src.java.dir" location="C:\Users\hp\eclipse-workspace\malakb\src\malakb"/>
 <property name="src.test.dir" location="C:\Users\hp\eclipse-workspace\malakb\src\malakb"/>
 <property name="result.dir" location="./target"/>
@@ -13,7 +13,10 @@
         <pathelement location="C:\Users\hp\eclipse\committers-oxygen2\eclipse\plugins\hamcrest-core-1.3.jar"/>
         <!--<pathelement location="C:\eclipse\plugins\org.jacoco.ant-0.8.3.jar"/>-->
     </path>
-    
+
+	<target name="everything" depends="compile,jar,compile-testcases,test">
+		</target>
+		
 <target name="compile">
 <mkdir dir="${result.javaclasses.dir}"/>
 <javac srcdir="${src.java.dir}" destdir="${result.javaclasses.dir}" debug="true" includeantruntime="false" classpath="C:\Users\hp\eclipse\committers-oxygen2\eclipse\plugins\junit-4.12.jar">
